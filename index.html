@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index of /</title>
+     <!-- 引入 Vue 3 -->
+  <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"></script>
 </head>
 <body>
     <h1>Index of /</h1>
@@ -14,5 +16,18 @@
         <li><a href="/hh/">📁 hh/</a></li>
         <li><a href="/public/">📁 public/</a></li>
     </ul>
+      <div id="app">{{ message }}</div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          message: 'Hello unpkg!'
+        }
+      }
+    }).mount('#app');
+  </script>
 </body>
 </html>
